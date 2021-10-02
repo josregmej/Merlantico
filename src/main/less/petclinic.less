@@ -1,0 +1,249 @@
+/*
+ * Copyright 2016 the original author or authors.
+ *
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+@icon-font-path:    "../../webjars/bootstrap/fonts/";
+
+@spring-green:      #4a8d96;
+@spring-dark-green: rgb(40, 75, 81);
+@spring-brown:      #34302D;
+@spring-grey:       #838789;
+@spring-light-grey: #f1f1f1;
+
+@body-bg:                            rgb(255, 255, 255);
+@text-color:                        rgb(0, 64, 64);
+@link-color:                         rgb(255, 128, 0);
+@btn-default-border:              rgb(128, 0, 128);
+
+@navbar-default-link-color:         rgb(255, 255, 255); //Color normal texto
+@navbar-default-link-active-color: rgb(255, 255, 255);
+@navbar-default-link-hover-color:   rgb(234, 243, 244); //Color texto (Pasa el raton por encima)
+@navbar-default-link-hover-bg:      rgb(40, 75, 81); //Pagina a la que queremos seleccionar(Pasar el raton)
+@navbar-default-toggle-icon-bar-bg: rgb(0, 0, 0); //No sabemos
+@navbar-default-toggle-hover-bg:    transparent;
+@navbar-default-link-active-bg:     rgb(28, 49, 53); //Pagina en la que estamos
+
+@border-radius-base:             0;
+@border-radius-large:            0;
+@border-radius-small:            0;
+
+@btn-default-color:             rgb(255, 255, 255);
+@btn-default-bg:                  rgb(81, 81, 255);
+@btn-default-border:              rgb(0, 0, 0);
+
+@nav-tabs-active-link-hover-color:         rgb(128, 0, 64);
+@nav-tabs-active-link-hover-bg:            rgb(128, 255, 128);
+@nav-tabs-active-link-hover-border-color:  rgb(0, 128, 255);
+@nav-tabs-border-color:                    rgb(0, 128, 0);
+
+@pagination-active-bg:                    @spring-brown;
+@pagination-active-border:                @spring-green;
+@table-border-color:                     rgb(0, 0, 45);
+
+.table > thead > tr > th {
+  background-color: lighten( rgb(0, 47, 47), 25%);
+  color:   rgb(25, 25, 25);
+}
+
+
+.table-filter {
+  background-color:  rgb(128, 255, 128);
+  padding: 9px 12px;
+}
+
+.nav > li > a {
+  color: @spring-grey;
+}
+
+.btn-default {
+  border-width: 2px;
+  border-radius: 2em/7em;
+  transition: border 0.15s;
+  -webkit-transition: border 0.15s;
+  -moz-transition: border 0.15s;
+  -o-transition: border 0.15s;
+  -ms-transition: border 0.15s;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    background-color:  lighten( rgb(2, 6, 155), 15%);
+    border-color:  rgb(0, 0, 0);
+  }
+}
+
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+code {
+  font-size: 80%;
+}
+
+.xd-container {
+  margin-top: 40px;
+  margin-bottom: 100px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+h1 {
+  margin-bottom: 15px
+}
+
+.index-page--subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 30px;
+}
+
+.form-horizontal button.btn-inverse {
+  margin-left: 32px;
+}
+
+#job-params-modal .modal-dialog {
+  width: 90%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+[ng-cloak].splash {
+  display: block !important;
+}
+[ng-cloak] {
+  display: none;
+}
+
+.splash {
+  background: @spring-green;
+  color: @spring-brown;
+  display: none;
+}
+
+.error-page {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.error-page .error-title {
+  font-size: 24px;
+  line-height: 24px;
+  margin: 30px 0 0;
+}
+
+table td {
+  vertical-align: middle;
+}
+
+table td .progress {
+  margin-bottom: 0;
+}
+
+table td.action-column {
+  width: 1px;
+}
+
+.help-block {
+  color: lighten(@text-color, 50%); // lighten the text some for contrast
+}
+
+.xd-containers {
+  font-size: 15px;
+}
+
+.cluster-view > table td {
+  vertical-align: top;
+}
+
+.cluster-view .label, .cluster-view .column-block {
+  display: block;
+}
+
+.cluster-view .input-group-addon {
+  width: 0%;
+}
+
+.cluster-view {
+  margin-bottom: 0;
+}
+
+.deployment-status-deployed {
+  .label-success;
+}
+
+.deployment-status-incomplete {
+  .label-warning;
+}
+
+.deployment-status-failed {
+  .label-danger;
+}
+
+.deployment-status-deploying {
+  .label-info
+}
+.deployment-status-na {
+}
+
+.container-details-table th {
+  background-color: lighten(@spring-brown, 3%);
+  color: @spring-light-grey;
+}
+
+.status-help-content-table td {
+  color: @spring-brown;
+}
+
+.alert-success {
+  .alert-variant(fade(@alert-success-bg, 70%); @alert-success-border; @alert-success-text);
+}
+.alert-info {
+  .alert-variant(fade(@alert-info-bg, 70%); @alert-info-border; @alert-info-text);
+}
+.alert-warning {
+  .alert-variant(fade(@alert-warning-bg, 70%); @alert-warning-border; @alert-warning-text);
+}
+.alert-danger {
+  .alert-variant(fade(@alert-danger-bg, 70%); @alert-danger-border; @alert-danger-text);
+}
+
+.myspinner {
+  animation-name: spinner;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  -webkit-transform-origin: 49% 50%;
+  -webkit-animation-name: spinner;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+hr {
+  border-top: 1px dotted @spring-brown;
+}
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:30%;
+}
+
+
+@import "typography.less";
+@import "header.less";
+@import "responsive.less";
